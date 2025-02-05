@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yardstick Assignment
 
-## Getting Started
+This is a **Next.js** application that serves as a task management system. It utilizes **Next.js Server Actions** for backend operations like creating, updating, and deleting tasks. The project follows best practices to ensure efficient API handling and smooth user interactions.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Full-Stack with Next.js**: Uses Next.js for both frontend and backend.
+- **Next.js Server Actions**: Implements server-side logic for managing tasks.
+- **Task Management**: Create, update, delete, and view tasks with due dates and statuses.
+- **Form Validation**: Uses `react-hook-form` with `zod` validation.
+- **UI Components**: Built with `shadcn/ui`, `radix-ui`, and `tailwindcss` for a modern UI.
+- **MongoDB Integration**: Uses **MongoDB** as the database.
+- **Optimized Performance**: Uses **React 19** for better rendering and performance.
+- **Fully Responsive**: Works across different screen sizes.
+
+## 💂 Tech Stack
+
+- **Frontend & Backend**: [Next.js 15](https://nextjs.org/)
+- **Database**: [MongoDB](https://www.mongodb.com/)
+- **Validation**: [Zod](https://zod.dev/) & [React Hook Form](https://react-hook-form.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/) & [Radix UI](https://www.radix-ui.com/)
+- **State Management**: React **useState** & **useForm**
+- **Date Handling**: [date-fns](https://date-fns.org/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+## 🛠️ Installation & Setup
+
+### 1️⃣ **Clone the Repository**
+```sh
+git clone https://github.com/hey-virender/yardstick-assignment.git
+cd yardstick-assignment
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ **Install Dependencies**
+```sh
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3️⃣ **Set up Environment Variables**
+Create a `.env` file in the root directory and add the following:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+MONGODB_URI=your_mongodb_connection_string
+```
 
-## Learn More
+### 4️⃣ **Run the Project Locally**
+```sh
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+The application will be available at **http://localhost:3000**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Available Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Command          | Description                              |
+|-----------------|----------------------------------|
+| `npm run dev`   | Start the development server  |
+| `npm run build` | Build for production  |
+| `npm run start` | Start the production server  |
+| `npm run lint`  | Lint the project  |
 
-## Deploy on Vercel
+## 📝 API Endpoints (Server Actions)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project uses **Next.js Server Actions** instead of traditional REST APIs. The backend logic is implemented in Next.js directly under the `app/actions/` directory.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Create Task** → `createTask.ts`
+- **Update Task** → `updateTask.ts`
+- **Delete Task** → `deleteTask.ts`
+- **Fetch Tasks** → `getTasks.ts`
+
+All server actions are handled using **Next.js Server Actions**, eliminating the need for a separate backend.
+
+## ✨ Deployment
+
+The project is already deployed on **Vercel**.
+
+https://yardstick-assignment-one.vercel.app/
+
+You can redeploy using:
+```sh
+vercel deploy
+```
+Make sure to add your `MONGODB_URI` in **Vercel's environment variables**.
+
+## 🤝 Contributing
+
+If you want to contribute:
+1. Fork the repo.
+2. Create a new branch: `git checkout -b feature-name`
+3. Make changes and commit: `git commit -m "Added new feature"`
+4. Push changes: `git push origin feature-name`
+5. Open a **Pull Request**.
+
+## 🐝 License
+
+This project is **not** open-source but can be used for internship evaluation purposes.
+
+---
+
+**💌 Contact**  
+For any queries, feel free to reach out:  
+GitHub: [hey-virender](https://github.com/hey-virender)  
+
+---
+
+### 🔥 Notes:
+- The project is optimized for **Next.js 15** and **React 19**.
+- Uses **Server Actions** instead of APIs (like Express.js or Next.js API Routes).
+- The `.env` file must contain **MONGODB_URI** to run locally.
